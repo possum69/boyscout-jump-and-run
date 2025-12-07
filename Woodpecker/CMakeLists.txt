@@ -16,6 +16,7 @@ qt_add_qml_module(appWoodpecker
     URI Woodpecker
     QML_FILES
         Main.qml
+        SOURCES playgroundcpp.h playgroundcpp.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
