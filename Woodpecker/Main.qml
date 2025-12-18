@@ -17,53 +17,58 @@ Window {
         property real vy: 0
 
         anchors.centerIn: parent
-    }
-    Rectangle {
-        id: kopf
-        width: 20
-        height: 20
-        radius: 10
-        color: "black"
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 0
-    }
-    Rectangle {
-        id: körper
-        width: 4
-        height: 30
-        color: "black"
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 20
+        Rectangle {
+            id: body
+            width: 4
+            height: 30
+            color: "black"
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: 20
+            Rectangle {
+                id: kopf
+                width: 20
+                height: 20
+                radius: 10
+                color: "black"
+                anchors.horizontalCenter: parent.horizontalCenter
+                y: 0
+            }
+            Rectangle {
+                id: armleft
+                width: 30
+                height: 3
+                color: "black"
+                anchors.horizontalCenter: parent.horizontalCenter
+                y: 30
+            }
+            Rectangle {
+                id: beinleft
+                width: 3
+                height: 25
+                color: "black"
+                rotation: -20
+                anchors.margins: parent.margins
+                y: 45
+                x: 0
+            }
+
+            Rectangle {
+                id: legright
+                width: 3
+                height: 25
+                color: "black"
+                rotation: 20
+                anchors.margins: parent.margins
+                y: 45
+                x: 0
+            }
+        }
     }
 
-    Rectangle {
-        width: 30
-        height: 3
-        color: "black"
-        anchors.horizontalCenter: parent.horizontalCenter
-        y: 30
-    }
 
 
-    Rectangle {
-        width: 3
-        height: 25
-        color: "black"
-        rotation: -20
-        anchors.margins: parent.margins
-        y: 45
-        x: 323
-    }
 
-    Rectangle {
-        width: 3
-        height: 25
-        color: "black"
-        rotation: 20
-        anchors.margins: parent.margins
-        y: 45
-        x: 313
-    }
+
 
 
 
